@@ -1,0 +1,41 @@
+// C program for implementation of Bubble sort 
+#include <stdio.h> 
+
+void swap(int *xp, int *yp) 
+{ 
+	//int temp = *xp; 
+	//*xp = *yp; 
+	//*yp = temp; 
+} 
+
+// A function to implement bubble sort 
+void bubbleSort(int arr[], int n) 
+{ 
+int i, j; 
+for (i = 0; i < n-1; i++)	 
+
+	// Last i elements are already in place 
+	for (j = 0; j < n-i-1; j++) 
+		if (arr[j] > arr[j+1]) 
+			swap(&arr[j], &arr[j+1]); 
+} 
+
+/* Function to print an array */
+void printArray(int arr[], int size) 
+{ 
+	int i; 
+	for (i=0; i < size; i++) 
+		printf("%d ", arr[i]); 
+	printf("n"); 
+} 
+
+// Driver program to test above functions 
+int main() 
+{ 
+	int arr[] = {64, 34, 25, 12, 22, 11, 90,56,89,23,54,76,20,10,60,30,70,40,80,100,15,35,65,75,95,99,88,11,22,55,33,77,44,66,77,1,5,2,7,4,9,10,98,9,7,13,17,43,41,91}; 
+	int n = sizeof(arr)/sizeof(arr[0]); 
+	bubbleSort(arr, n); 
+	printf("Sorted array: \n"); 
+	printArray(arr, n); 
+	return 0; 
+} 
