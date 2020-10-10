@@ -2,9 +2,9 @@
 int main()
 {
 	int i,n;
-	//int i=2^n;n<=11;
+	int i=2^n;n<=11;
 	for (i=2^n;i<=20;i++)
 	{
-//	printf("%d\n",i*2);
+	printf("%d\n",i*2);
 	}
 }
