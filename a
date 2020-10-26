@@ -1,9 +1,42 @@
-#include<stdio.h>
-int main()
-{
-	//int i=2;
-	//for (i=2;i<=20;i++)
-	{
-	//printf("%d\n",i);
-	}
-}
+
+def jpeg_res(filename):
+   
+   
+   with open(filename,'rb') as img_file:
+
+       # height of image (in 2 bytes) is at 164th position
+       img_file.seek(163)
+
+       # read the 2 bytes
+       a = img_file.read(2)
+
+       # calculate height
+       height = (a[0] << 8) + a[1]
+
+       # next 2 bytes is width
+       a = img_file.read(2)
+
+       # calculate width
+       width = (a[0] << 8) + a[1]
+
+   print("The resolution of the image is",width,"x",height)
+X = [[12,7,3],
+    [4 ,5,6],
+    [7 ,8,9]]
+
+Y = [[5,8,1],
+    [6,7,3],
+    [4,5,9]]
+
+result = [[0,0,0],
+         [0,0,0],
+         [0,0,0]]
+
+# iterate through rows
+for i in range(len(X)):
+   # iterate through columns
+   for j in range(len(X[0])):
+       result[i][j] = X[i][j] + Y[i][j]
+
+for r in result:
+   print(r)
