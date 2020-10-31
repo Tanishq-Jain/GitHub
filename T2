@@ -3,5 +3,5 @@ main()
 {
 	char A;
 	printf("ASCII value of A=%d",A);
-	return 0;
+	
 }
