@@ -1,0 +1,10 @@
+#include<stdio.h>
+main()
+{
+	//int a=12,b=25;
+	//printf("output:%d",a&b);
+	//printf("output:%d",a|b);
+	//printf("output:%d",a^b);
+	//printf("output:%d",8>>2);
+	//printf("output:%d",2<<2);
+}
